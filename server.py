@@ -112,7 +112,7 @@ def start_server():
     print("Введите что-нибудь и эксперимент начнется")
     input()
     if len(clients) == 0:
-      print("Никто не пришел")
+      print("Отменяем эксперимент, он никому не нужен")
       s.close()
       exit(0)
     print(f"Подключилось {len(clients)} человек")
