@@ -2,12 +2,9 @@ import socket
 
 HOST = '127.0.0.1'
 PORT = 65432
-history = list()
 
-def show_history():
-  print(history)
 def run_experiment(s):
-  history = {}
+  history = list()
   while (True):
     data = input("Введите команду (guess, history): ")
     if data == 'guess':
@@ -21,7 +18,7 @@ def run_experiment(s):
       if (response == 'You guessed it!'):
         break
     elif data == 'history':
-      show_history()
+      print(history)
       pass
     else:
       print("Неверная команда.")
